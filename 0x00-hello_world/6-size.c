@@ -1,7 +1,5 @@
 #include <stdio.h>
-/*
- * prints size of datatypes
-*/
+/*prints size of datatypes*/
 int main(void)
 {
 printf("Size of a char: %lu byte(s)\n", sizeof(char));

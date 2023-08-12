@@ -9,5 +9,6 @@ int main(void)
 	for(i=0;i<sizeof(msg);i++){
 		putchar(msg[i]);
 	}
+	fprintf(stderr,"Bazinga");
 	return (1);
 }

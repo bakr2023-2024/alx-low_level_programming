@@ -12,13 +12,11 @@ int main(void)
 
 	for (n = 0; n < 10; n++)
 	{
-		for (m = 0; m < 10; m++)
-		{
-			putchar(n + '0');
-			putchar(m + '0');
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(n + '0');
+		if(n == 9)
+			continue;
+		putchar(',');
+		putchar(' ');
 	}
 	return (0);
 }

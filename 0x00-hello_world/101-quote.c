@@ -4,7 +4,7 @@
  */
 int main(void)
 {
-	static const char[] msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	int i;
 	for(i=0;i<sizeof(msg);i++){
 		putchar(msg[i]);

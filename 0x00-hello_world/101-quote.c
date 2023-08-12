@@ -6,13 +6,8 @@
  */
 int main(void)
 {
-	unsigned int i;
-	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	for (i = 0; i < sizeof(msg); i++)
-	{
-		putchar(msg[i]);
-	}
-	fprintf(stderr, "");
+	char* msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	fprintf(stderr, msg);
 	return (1);
 }

@@ -12,18 +12,8 @@ int main(void)
 
 	for (n = 0; n < 15; n++)
 	{
-		if (n == 10)
-			putchar('a');
-		else if (n == 11)
-			putchar('b');
-		else if (n == 12)
-			putchar('c');
-		else if (n == 13)
-			putchar('d');
-		else if (n == 14)
-			putchar('e');
-		else if (n == 15)
-			putchar('f');
+		if (n >= 10)
+			putchar(n + 87 + '0');
 		else
 			putchar(n + '0');
 	}

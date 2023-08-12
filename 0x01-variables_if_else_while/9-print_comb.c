@@ -14,8 +14,8 @@ int main(void)
 	{
 		for (m = 0; m < 10; m++)
 		{
-			putchar(n);
-			putchar(m);
+			putchar(n + '0');
+			putchar(m + '0');
 			putchar(',');
 			putchar(' ');
 		}

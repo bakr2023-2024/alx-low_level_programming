@@ -1,2 +1,5 @@
-#!/bin/bash
-gcc -o $CFILE
+#include <stdio.h>
+int main(void){
+puts("Hello World");
+	return 0;
+}

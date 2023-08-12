@@ -12,7 +12,7 @@ int main(void)
 	for (i = 0; i < sizeof(msg); i++)
 	{
 		putchar(msg[i]);
-		fprintf(stderr, " ");
 	}
+	fprintf(stderr, "");
 	return (1);
 }

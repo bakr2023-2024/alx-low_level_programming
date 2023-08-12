@@ -1,14 +1,18 @@
 #include <stdio.h>
 /**
- * Description:  A column of asterisks on the left side,
+ * main - Entry point
+ * Description: 'the program's description'
+ * Return: Always 1 (Fail)
  */
 int main(void)
 {
 	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	long unsigned int i;
-	for(i=0;i<sizeof(msg);i++){
+	unsigned long int i;
+
+	for (i = 0; i < sizeof(msg); i++)
+	{
 		putchar(msg[i]);
 	}
-	fprintf(stderr,"Bazinga");
+	fprintf(stderr, "Bazinga");
 	return (1);
 }

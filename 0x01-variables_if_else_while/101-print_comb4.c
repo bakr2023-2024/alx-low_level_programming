@@ -19,7 +19,7 @@ int main(void)
 				putchar(n + '0');
 				putchar(m + '0');
 				putchar(o + '0');
-				if (n == m || m == o || n == o)
+				if (n == 7)
 					continue;
 				putchar(',');
 				putchar(' ');

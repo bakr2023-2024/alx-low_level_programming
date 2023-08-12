@@ -13,6 +13,5 @@ int main(void)
 	{
 		putchar(msg[i]);
 	}
-	fprintf(stderr, "Bazinga");
-	return (1);
+	return (1,"error");
 }

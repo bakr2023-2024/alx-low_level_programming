@@ -8,7 +8,7 @@
  */
 
 int main(void)
- {
+{
 	int n;
 
 	srand(time(0));
@@ -22,4 +22,4 @@ int main(void)
 		printf("is %d and is less than 6 and not 0", n % 10);
 	printf("\n");
 	return (0);
- }
+}

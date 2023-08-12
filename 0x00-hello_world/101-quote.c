@@ -13,5 +13,5 @@ int main(void)
 	{
 		putchar(msg[i]);
 	}
-	return (1,"error");
+	return (1);
 }

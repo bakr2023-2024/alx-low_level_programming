@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 /**
  * Description:  A column of asterisks on the left side,
  */

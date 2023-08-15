@@ -1,3 +1,0 @@
-#!/bin/bash
-cat CBoilerplate >> "$1"
-vim "$1"

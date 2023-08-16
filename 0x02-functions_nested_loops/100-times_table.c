@@ -21,7 +21,7 @@ void print_times_table(int n)
 
 			if (k >= 100)
 			{
-				int t = k / 10;i
+				int t = k / 10;
 
 				if (j > 0)
 					_putchar(' ');

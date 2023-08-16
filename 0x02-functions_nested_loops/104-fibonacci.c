@@ -1,30 +1,20 @@
 #include <stdio.h>
 
 /**
- * fib - returns value of term n of fib
- * @n: the term of fib series
- * Return: the value corresponding to term n
- */
-int fib(int n)
-{
-	if (n == 2)
-		return (2);
-	else if (n == 1)
-		return (1);
-	else
-		return (fib(n - 1) + fib(n - 2));
-}
-/**
  * main - Entry point
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+	unsigned long int i, a = 1, b = 2, c;
 
-	for (i = 1; i <= 98; i++)
+	printf("%lu, %lu, ", a, b);
+	for (i = 3; i <= 98; i++)
 	{
-		printf("%d", fib(i));
+		c = a + b;
+		a = b;
+		b = c;
+		printf("%lu", c);
 		if (i < 98)
 			printf(", ");
 	}

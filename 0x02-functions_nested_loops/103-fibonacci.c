@@ -20,14 +20,13 @@ int fib(int n)
  */
 int main(void)
 {
-	int i;
+	int i = 1, val, sum = 0;
 
-	for (i = 1; i <= 50; i++)
-	{
-		printf("%d", fib(i));
-		if (i < 50)
-			printf(", ");
-	}
-	printf("\n");
+	do {
+		val = fib(i++);
+		if (val % 2 == 0)
+			sum += val;
+	} while (val <= 4000000);
+	printf("%d\n", sum);
 	return (0);
 }

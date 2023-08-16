@@ -22,10 +22,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		printf("%d", fib(i));
-		if (i < 50)
+		if (i < 98)
 			printf(", ");
 	}
 	printf("\n");

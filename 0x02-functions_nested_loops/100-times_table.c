@@ -23,35 +23,42 @@ void print_times_table(int n)
 			{
 				int t = k / 10;
 
+				if (i > 0 && j < n)
+					_putchar(' ');
 				_putchar((k / 100) + '0');
 				_putchar((t % 10) + '0');
 				_putchar((k % 10) + '0');
 				if (j < n)
 				{
 					_putchar(',');
-					_putchar(' ');
 				}
 			}
 			else if (k >= 10)
 			{
+				if (i > 0 && j < n)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
 				if (j < n)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
 				}
 			}
 			else
 			{
+				if (i > 0 && j < n)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar(k + '0');
 				if (j < n)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
 				}
 			}
 		}

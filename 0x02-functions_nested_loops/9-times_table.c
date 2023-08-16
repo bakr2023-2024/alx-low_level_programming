@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point
- * Description: 'the program's description'
- * Return: Always 0 (Success)
+ * times_table - dame tu coista
+ * Return: void
  */
 
 void times_table(void)
@@ -13,11 +12,11 @@ void times_table(void)
 	for (i = 0; i < 10; i++)
 	{
 		int j;
-		
+
 		_putchar(i + '0');
 		_putchar(',');
 		_putchar(' ');
-		for (j = 0; j < 10 ;j++)
+		for (j = 0; j < 10 ; j++)
 		{
 			int k = i * j;
 

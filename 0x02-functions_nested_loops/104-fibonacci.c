@@ -33,6 +33,10 @@ int main(void)
 		printf("%lu%lu", h1, h2);
 		if (i < 98)
 			printf(", ");
+		fib11 = h1 / 10000000000;
+		fib12 = h1 % 10000000000;
+		fib21 = h2 / 10000000000;
+		fib22 = h2 % 10000000000;
 	}
 	printf("\n");
 	return (0);

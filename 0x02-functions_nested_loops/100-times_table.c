@@ -21,17 +21,13 @@ void print_times_table(int n)
 
 			if (k >= 100)
 			{
-				int t = k / 10;
+				int t = k / 10;i
 
 				if (j > 0)
 					_putchar(' ');
 				_putchar((k / 100) + '0');
 				_putchar((t % 10) + '0');
 				_putchar((k % 10) + '0');
-				if (j < n)
-				{
-					_putchar(',');
-				}
 			}
 			else if (k >= 10)
 			{
@@ -42,10 +38,6 @@ void print_times_table(int n)
 				}
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
-				if (j < n)
-				{
-					_putchar(',');
-				}
 			}
 			else
 			{
@@ -56,11 +48,9 @@ void print_times_table(int n)
 					_putchar(' ');
 				}
 				_putchar(k + '0');
-				if (j < n)
-				{
-					_putchar(',');
-				}
 			}
+			if(j < n)
+				_putchar(',');
 		}
 		_putchar('\n');
 	}

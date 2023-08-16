@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _is_lower - checks if a character is lower case
+ * _islower - checks if a character is lower case
  * @parameterch: character to be checked
  * Return: 1 if true, 0 if false
  */
 
-int _is_lower(char ch)
+int _islower(char ch)
 {
 	int val = ch;
 

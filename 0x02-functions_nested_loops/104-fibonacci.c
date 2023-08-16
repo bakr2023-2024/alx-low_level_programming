@@ -23,8 +23,8 @@ int main(void)
 	fib22 = b % 10000000000;
 	for (i = 93; i <= 98; i++)
 	{
-		h1 = fib11 + fib12;
-		h2 = fib21 + fib22;
+		h1 = fib11 + fib21;
+		h2 = fib12 + fib22;
 		if (h2 > 9999999999)
 		{
 			h1 += 1;

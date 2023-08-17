@@ -8,9 +8,7 @@
 int main(void)
 {
 	    int t;
-	  for (t = -100; t < 102; t++){
-					    print_number(t);
+					    print_number(-0);
 					        _putchar('\n');
-	  }
 						    return (0);
 }

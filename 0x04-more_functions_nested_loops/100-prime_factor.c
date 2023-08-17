@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	unsigned long int n = 612852475143;
+	unsigned long int n = 1231952;
 	int i = 2;
 	int max = -1;
 

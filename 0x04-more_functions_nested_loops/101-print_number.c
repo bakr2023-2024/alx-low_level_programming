@@ -11,8 +11,8 @@ void print_number(int n)
 		_putchar('0');
 	else
 	{
-		int i = 0, k = n, p, q;
-
+		int i = 0, p, q;
+		unsigned int k = n;
 		do {
 			k /= 10;
 			i++;

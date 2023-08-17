@@ -19,6 +19,6 @@ int main(void)
 		if (max < i)
 			max = i;
 	}
-	printf("%d", max);
+	printf("%lu", max);
 	return (0);
 }

@@ -16,6 +16,7 @@ void print_number(int n)
 	for (p = 0; p < i; p++)
 	{
 		int s = n;
+
 		for (q = i - 1; q > 0; q--)
 			s /= 10;
 		_putchar((s % 10) + '0');

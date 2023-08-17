@@ -1,16 +1,16 @@
 #include "main.h"
-/**
- * main - Entry point
- * @parameter: 
- * Return: Always 0 (Success)
- */
 
+/**
+ *  * main - check the code
+ *   *
+ *    * Return: Always 0.
+ *     */
 int main(void)
 {
-	print_number(10);
-	_putchar('\n');
-	print_number(0);
-	_putchar('\n');
-	print_number(-101);
-	_putchar('\n');
+	    int t;
+	  for (t = -100; t < 102; t++){
+					    print_number(t);
+					        _putchar('\n');
+	  }
+						    return (0);
 }

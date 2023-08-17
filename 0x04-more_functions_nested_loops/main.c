@@ -8,7 +8,10 @@
 
 int main(void)
 {
-	print_triangle(2);
-	print_triangle(10);
-	print_triangle(0);
+	print_number(10);
+	_putchar('\n');
+	print_number(0);
+	_putchar('\n');
+	print_number(-101);
+	_putchar('\n');
 }

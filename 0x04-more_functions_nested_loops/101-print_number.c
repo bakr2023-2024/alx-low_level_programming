@@ -9,14 +9,14 @@ void print_number(int n)
 {
 	int i = 0, k = n, p, q;
 
-	do{
+	do {
 		k /= 10;
 		i++;
-	}while (k != 0);
-	for(p = 0; p < i; p++)
+	} while (k != 0);
+	for (p = 0; p < i; p++)
 	{
 		int s = n;
-		for(q = i - 1; q > 0; q--)
+		for (q = i - 1; q > 0; q--)
 			s /= 10;
 		_putchar((s % 10) + '0');
 	}

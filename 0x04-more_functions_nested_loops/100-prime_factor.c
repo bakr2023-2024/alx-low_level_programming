@@ -8,7 +8,7 @@ int main(void)
 {
 	unsigned long int n = 612852475143;
 	int i = 2;
-	unsigned long int max = -1;
+	int max = -1;
 
 	while (n != 1)
 	{
@@ -19,6 +19,6 @@ int main(void)
 		if (max < i)
 			max = i;
 	}
-	printf("%lu", max);
+	printf("%d", max);
 	return (0);
 }

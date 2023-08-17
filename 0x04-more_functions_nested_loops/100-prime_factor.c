@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	unsigned long int n = 1231952;
+	unsigned long int n = 612852475143;
 	int i = 2;
 	int max = -1;
 
@@ -19,6 +19,6 @@ int main(void)
 		if (max < i)
 			max = i;
 	}
-	printf("%d", max);
+	printf("%d\n", max);
 	return (0);
 }

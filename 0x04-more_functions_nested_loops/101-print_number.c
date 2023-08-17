@@ -13,11 +13,18 @@ void print_number(int n)
 		k /= 10;
 		i++;
 	} while (k != 0);
+	if (n < 0)
+	{
+		k = -n;
+		_putchar('-');
+	}
+	else
+		k = n;
 	for (p = 0; p < i; p++)
 	{
-		int s = n;
+		int s = k;
 
-		for (q = i - 1; q > 0; q--)
+		for (q = i - p - 1; q > 0; q--)
 			s /= 10;
 		_putchar((s % 10) + '0');
 	}

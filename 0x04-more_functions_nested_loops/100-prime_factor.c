@@ -10,7 +10,7 @@ int main(void)
 	int i = 2;
 	int max = -1;
 
-	while(n != 1)
+	while (n != 1)
 	{
 		if (n % i == 0)
 			n /= i;

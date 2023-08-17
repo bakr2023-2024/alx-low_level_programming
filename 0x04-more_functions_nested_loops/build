@@ -5,5 +5,5 @@ fi
 vim "$1"
 betty "$1"
 if [ $? -eq 0 ]; then
-	push
+	git add .;git commit -m ".";git push origin main;
 fi

@@ -31,5 +31,5 @@ int _atoi(char *s)
 
 		i += k * (len--);
 	}
-	return ((is_nega == 1) ? -k : k);
+	return ((is_nega == 1) ? -i : i);
 }

@@ -10,7 +10,7 @@
 int main(void)
 {
 	srand(time(0));
-	int r = rand()%20+1;
-	printf("%d",r);
+	int r = rand() % 20 + 1;
+	printf("%d", r);
 	return (0);
 }

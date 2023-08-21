@@ -21,7 +21,7 @@ int _atoi(char *s)
 			len++;
 			if (pos == -1)
 				pos = itr;
-			if (l != '\0' && (l >=57 || l <= 48))
+			if (l != '\0' && (l >= 57 || l <= 48))
 				break;
 
 		}

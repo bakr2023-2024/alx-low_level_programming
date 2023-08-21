@@ -9,9 +9,9 @@
 
 int main(void)
 {
-	srand(time(0));
 	int r;
-	
+
+	srand(time(0));	
 	r = rand() % 20 + 1;
 	printf("%d", r);
 	return (0);

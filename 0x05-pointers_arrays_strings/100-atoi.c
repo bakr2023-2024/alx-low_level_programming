@@ -27,11 +27,12 @@ int _atoi(char *s)
 		}
 	}
 	printf("length: %d, position: %d, iterator: %d\n", len, pos, itr);
-	for (itr = pos; len != 0; itr++)
+	for (; len != 0; len--)
 	{
-		int k = *(s + itr) - '0';
-
-		i += k * (len--);
+		int k = *(s + itr) - '0', m = 1, itr2;
+		for (itr2 = 0; m itr2 < len; itr2++)
+			m *= 10;
+		i += k * m;
 	}
 	return ((is_nega == 1) ? -i : i);
 }

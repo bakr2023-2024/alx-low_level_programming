@@ -25,7 +25,6 @@ int _atoi(char *s)
 				break;
 		}
 	}
-	printf("length: %d, position: %d, iterator: %d\n", len, pos, itr);
 	for (; len != 0; len--)
 	{
 		int k = *(s + pos++) - '0', m = 1, itr2;

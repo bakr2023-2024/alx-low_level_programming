@@ -29,7 +29,7 @@ int _atoi(char *s)
 	printf("length: %d, position: %d, iterator: %d\n", len, pos, itr);
 	for (; len != 0; len--)
 	{
-		int k = *(s + itr) - '0', m = 1, itr2;
+		int k = *(s + pos++) - '0', m = 1, itr2;
 
 		for (itr2 = 0; itr2 < len; itr2++)
 			m *= 10;

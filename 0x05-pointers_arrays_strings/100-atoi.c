@@ -30,7 +30,7 @@ int _atoi(char *s)
 	{
 		int k = *(s + pos++) - '0', m = 1, itr2;
 
-		for (itr2 = 0; itr2 < len; itr2++)
+		for (itr2 = 1; itr2 < len; itr2++)
 			m *= 10;
 		i += k * m;
 	}

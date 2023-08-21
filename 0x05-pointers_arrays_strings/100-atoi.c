@@ -33,5 +33,5 @@ int _atoi(char *s)
 			m *= 10;
 		i += k * m;
 	}
-	return ((is_nega == 1) ? - (unsigned int) i : i);
+	return ((is_nega == 1) ? -(unsigned int) i : i);
 }

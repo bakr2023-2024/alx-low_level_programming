@@ -6,7 +6,7 @@
  * Return: number
  */
 
-int _atoi(char* s)
+int _atoi(char *s)
 {
 	int i = 0, is_nega = 0, len = 0, pos = -1, itr;
 
@@ -19,7 +19,7 @@ int _atoi(char* s)
 			len++;
 			if (pos == -1)
 				pos = itr;
-			if(itr != 0 && *(s + itr - 1) == '-')
+			if (itr != 0 && *(s + itr - 1) == '-')
 				is_nega = 1;
 		}
 	}

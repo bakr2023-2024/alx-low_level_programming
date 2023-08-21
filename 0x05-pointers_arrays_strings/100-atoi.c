@@ -15,9 +15,7 @@ int _atoi(char *s)
 		char j = *(s + itr);
 
 		if (j == '-')
-			is_nega = 1;
-		else if (j == '+')
-			is_nega = 0;
+			is_nega = (is_nega == 1) ? 0 : 1;
 		if (j >= 48 && j <= 57)
 		{
 			len++;

@@ -12,19 +12,19 @@ int _atoi(char *s)
 
 	for (itr = 0; *(s + itr) != '\0'; itr++)
 	{
-		int j = *(s + itr);
+		char j = *(s + itr);
 
+		if (j == '-')
+			is_nega = 1;
+		else if (j == '+')
+			is_nega = 0;
 		if (j >= 48 && j <= 57)
 		{
 			len++;
 			if (pos == -1)
 				pos = itr;
-			if (itr != 0 && *(s + itr - 1) == '-')
-				is_nega = 1;
 		}
 	}
-	if (len == 0)
-		return (0);
 	for (itr = pos; len != 0; itr++)
 	{
 		int k = *(s + itr) - '0';

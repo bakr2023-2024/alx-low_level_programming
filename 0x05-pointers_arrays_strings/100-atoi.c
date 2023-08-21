@@ -26,6 +26,7 @@ int _atoi(char *s)
 
 		}
 	}
+	printf("length: %d, position: %d, iterator: %d\n", len, pos, itr);
 	for (itr = pos; len != 0; itr++)
 	{
 		int k = *(s + itr) - '0';

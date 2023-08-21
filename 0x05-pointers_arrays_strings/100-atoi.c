@@ -8,7 +8,8 @@
 
 int _atoi(char *s)
 {
-	int i = 0, is_nega = 0, len = 0, pos = -1, itr;
+	unsigned int i = 0;
+	int is_nega = 0, len = 0, pos = -1, itr;
 
 	for (itr = 0; *(s + itr) != '\0'; itr++)
 	{
@@ -33,5 +34,5 @@ int _atoi(char *s)
 			m *= 10;
 		i += k * m;
 	}
-	return ((is_nega == 1) ? -(unsigned int) i : i);
+	return ((is_nega == 1) ? -i : i);
 }

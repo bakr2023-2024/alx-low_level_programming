@@ -9,13 +9,13 @@
 char *leet(char *s)
 {
 	int i = 0, j = 0;
-	char *alpha = "aAeEoOtTlL";
-	char *code = "4433007711";
+	char *alpha = "AEOTL";
+	char *code = "43071";
 
 	for (; s[i] != '\0'; i++)
 	{
-		for (; j < 10; j++)
-			if (s[i] == alpha[j])
+		for (; alpha[j] != '\0'; j++)
+			if (s[i] == alpha[j] || s[i] == alpha[j] - 32)
 				s[i] = code[j];
 	}
 	return (s);

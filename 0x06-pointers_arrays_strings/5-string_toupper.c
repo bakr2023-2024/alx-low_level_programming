@@ -12,7 +12,6 @@ char *string_toupper(char *s)
 
 	while (s[j] != '\0')
 		j++;
-	j--;
 	for (; i < j; i++)
 	{
 		if (s[i] >= 97 && s[i] <= 122)

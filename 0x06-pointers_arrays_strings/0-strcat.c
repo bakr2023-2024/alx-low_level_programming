@@ -3,7 +3,7 @@
 /**
  * _strcat - Entry point
  * @dest: destination
- * @src: source 
+ * @src: source
  * Return: new string
  */
 
@@ -16,7 +16,7 @@ char *_strcat(char *dest, char *src)
 	while (*(src + j) != '\0')
 		j++;
 	int k = i + j - 1;
-	char* res = (char*) malloc((k) * sizeof(char));
+	char *res = (char *) malloc((k) * sizeof(char));
 	int ptr = 0;
 
 	while (ptr < i)
@@ -26,5 +26,5 @@ char *_strcat(char *dest, char *src)
 	}
 	for (ptr = i; ptr <= k; ptr++)
 		*(res + ptr) = *(src + ptr);
-	return res;
+	return (res);
 }

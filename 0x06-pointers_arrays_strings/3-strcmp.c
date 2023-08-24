@@ -13,7 +13,7 @@ int _strcmp(char *s1, char *s2)
 	for (; s1[i] != '\0'; i++)
 	{
 		if (s1[i] != s2[i])
-			return ((s1[i] > s2[i]) ? 1 : -1)
+			return ((s1[i] > s2[i]) ? 1 : -1);
 	}
 	return (0);
 }

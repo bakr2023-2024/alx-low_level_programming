@@ -8,13 +8,13 @@
 
 char *leet(char *s)
 {
-	int i = 0, j = 0;
+	int i, j;
 	char *alpha = "AiaEeOoTtLl";
 	char *code = "4433007711";
 
-	for (; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (; alpha[j] != '\0'; j++)
+		for (j = 0; alpha[j] != '\0'; j++)
 		{
 			printf("Comparing %c with %c\n",s[i],alpha[j]);
 			if (s[i] == alpha[j])

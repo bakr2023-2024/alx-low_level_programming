@@ -18,4 +18,5 @@ char *leet(char *s)
 			if (s[i] == alpha[j])
 				s[i] = code[j];
 	}
+	return (s);
 }

@@ -9,14 +9,20 @@
 char *leet(char *s)
 {
 	int i = 0, j = 0;
-	char *alpha = "AEOTL";
-	char *code = "43071";
+	char *alpha = "AiaEeOoTtLl";
+	char *code = "4433007711";
 
 	for (; s[i] != '\0'; i++)
 	{
-		for (; alpha[j] != '\0'; j++)
-			if (s[i] == alpha[j] || s[i] == alpha[j] - 32)
+		for (; alpha[j] != '\0'; j++){
+			printf("Comparing %c with %c\n",s[i],alpha[j]);
+			if (s[i] == alpha[j])
+			{
+				printf("match\n");
 				s[i] = code[j];
+				printf("after: %c\n",s[i]);
+			}
+		}
 	}
 	return (s);
 }

@@ -9,10 +9,10 @@
 char *leet(char *s)
 {
 	int i = 0, j = 0;
-	char[] alpha = "aAeEoOtTlL";
-	char[] code = "4433007711";
+	char *alpha = "aAeEoOtTlL";
+	char *code = "4433007711";
 
-	for(; s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 	{
 		for (; alpha[j] != '\0'; j++)
 			if (s[i] == alpha[j])

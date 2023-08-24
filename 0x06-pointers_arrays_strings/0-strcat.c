@@ -9,23 +9,12 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i = 0, j = 0, k, ptr = 0;
-	char *res;
+	int i = 0, j = 0;
 
 	while (*(dest + i) != '\0')
 		i++;
 	while (*(src + j) != '\0')
-		j++;
-	k = i + j - 1;
-	res = (char *) malloc((k) * sizeof(char));
-	while (ptr < i)
-	{
-		*(res + ptr) = *(dest + ptr);
-		ptr++;
-	}
-	ptr = 0;
-	for (; i <= k; ptr++)
-		*(res + (i++)) = *(src + ptr);
-	dest = res;
+		*(dest + i++) = *(src + j++);
+	*(dest + i) = '\0';
 	return (dest);
 }

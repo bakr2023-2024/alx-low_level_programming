@@ -8,17 +8,16 @@
 
 void rev_string(char *n)
 {
-	int i = 0;
-	int j = n - 1;
+	int i = 0, j = 0;
 	char temp;
 
-	while (*(n + i) != '\0')
+	while (*(n + j) != '\0')
 	{
-		i++;
+		j++;
 	}
-	i--;
+	j--;
 
-	for (; i < n / 2; i++)
+	for (; i < (j + 1) / 2; i++)
 	{
 		temp = *(n + i);
 		*(n + i) = *(n + j);

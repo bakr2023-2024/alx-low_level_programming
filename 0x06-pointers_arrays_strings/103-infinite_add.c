@@ -17,11 +17,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i++;
 	while (n2[j] != '\0')
 		j++;
-	i-=2;
-	j-=2;
+	i -= 2;
+	j -= 2;
 	r[size_r] = '\0';
 	size_r--;
-	for (;size_r >= 0; size_r--)
+	for (; size_r >= 0; size_r--)
 	{
 		if (i < 0 && j < 0)
 			break;
@@ -34,7 +34,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		carry = result / 10;
 		r[size_r] = result % 10;
 	}
-	if(size_r >= 0 && ( i >= 0 || j >= 0))
+	if (size_r >= 0 && (i >= 0 || j >= 0))
 		return (NULL);
 	return (r);
 }

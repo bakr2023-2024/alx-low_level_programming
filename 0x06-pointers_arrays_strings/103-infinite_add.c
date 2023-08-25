@@ -1,40 +1,76 @@
 #include "main.h"
 
 /**
- *  infinite_add- Entry point
- * @n1: a7a
- * @n2: a7aaa
- * @r: a7aaaa
- * @size_r: niggaaa
- * Return: char string
+ * rev_string - reverse array
+ * @n: integer params
+ * Return: 0
+ */
+
+void rev_string(char *n)
+{
+	int i = 0;
+	int j = n - 1;
+	char temp;
+
+	while (*(n + i) != '\0')
+	{
+		i++;
+	}
+	i--;
+
+	for (; i < n / 2; i++)
+	{
+		temp = *(n + i);
+		*(n + i) = *(n + j);
+		*(n + j) = temp;
+		j--;
+	}
+}
+
+/**
+ * infinite_add - add 2 numbers together
+ * @n1: text representation of 1st number to add
+ * @n2: text representation of 2nd number to add
+ * @r: pointer to buffer
+ * @size_r: buffer size
+ * Return: pointer to calling function
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, carry = 0, result = 0;
+	int carry = 0, i = 0, j = 0, digits = 0;
+	int val1 = 0, val2 = 0, res = 0;
 
-	while (n1[i] != '\0')
+	while (*(n1 + i) != '\0')
 		i++;
-	while (n2[j] != '\0')
+	while (*(n2 + j) != '\0')
 		j++;
-	i -= 2;
-	j -= 2;
-	r[size_r] = '\0';
-	size_r--;
-	for (; size_r >= 0; size_r--)
+	i--;
+	j--;
+	if (j >= size_r || i >= size_r)
+		return (0);
+	while (j >= 0 || i >= 0 || carry == 1)
 	{
-		if (i < 0 && j < 0)
-			break;
-		else if (i < 0)
-			result = 0 + n2[j] - '0' + carry;
-		else if (j < 0)
-			result = 0 + n1[i] - '0' + carry;
+		if (i < 0)
+			val1 = 0;
 		else
-			result = n1[i] + n2[j] + carry;
-		carry = result / 10;
-		r[size_r] = result % 10;
+			val1 = *(n1 + i) - '0';
+		if (j < 0)
+			val2 = 0;
+		else
+			val2 = *(n2 + j) - '0';
+		res = val1 + val2 + res;
+		carry = res / 10;
+		if (digits >= (size_r - 1))
+			return (0);
+		*(r + digits) = (res % 10) + '0';
+		digits++;
+		j--;
+		i--;
 	}
-	if (size_r >= 0 && (i >= 0 || j >= 0))
-		return (NULL);
+	if (digits == size_r)
+		return (0);
+	*(r + digits) = '\0';
+	rev_string(r);
 	return (r);
 }

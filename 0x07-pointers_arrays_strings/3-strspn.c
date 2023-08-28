@@ -9,7 +9,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, len = 0;
+	unsigned int i, j, len = 0, max = 0;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
@@ -22,7 +22,12 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		if (accept[j] == '\0')
+		{
+			if (max < len)
+				max = len;
 			len = 0;
+		}
 	}
-	return (len);
+	max = len;
+	return (max);
 }

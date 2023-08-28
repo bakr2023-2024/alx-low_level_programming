@@ -1,12 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * @parameter: 
- * Return: Always 0 (Success)
+ * _memset - Entry point
+ * @s: hakuna
+ * @b: matata
+ * @n: ambola
+ * Return: pointer
  */
 
-int main(void)
+char *_memset(char *s, char b, unsigned int n)
 {
-	
+	unsigned int i;
+
+	for(i=0; i < n; i++)
+	{
+		*(s + i) = b;
+	}
+	return (s);
 }

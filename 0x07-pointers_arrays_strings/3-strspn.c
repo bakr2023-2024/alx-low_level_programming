@@ -9,11 +9,15 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, len = 0, max = 0;
+	unsigned int i, j, len = 0, max = 0, p = 0, q = 0;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	while (s[p] != '\0')
+		p++;
+	while(accept[q] != '\0')
+		q++;
+	for (i = 0; i <= p; i++)
 	{
-		for (j = 0; *(accept + j) != '\0'; j++)
+		for (j = 0; j <= q; j++)
 		{
 			if (s[i] == accept[j])
 			{
@@ -21,7 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (accept[j] == '\0')
+		if (j > q)
 		{
 			if (max < len)
 				max = len;

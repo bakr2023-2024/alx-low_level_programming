@@ -17,10 +17,9 @@ char *_strstr(char *haystack, char *needle)
 		for (j = 0; needle[j] != '\0'; j++)
 		{
 			if (haystack[k] == needle[j])
-			{
-				printf("Found %c\n",needle[j]);
 				k++;
-			}
+			else
+				break;
 		}
 		if (needle[j] == '\0')
 			return (haystack + i);

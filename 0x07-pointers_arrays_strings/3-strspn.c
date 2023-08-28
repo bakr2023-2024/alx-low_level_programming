@@ -28,6 +28,5 @@ unsigned int _strspn(char *s, char *accept)
 			len = 0;
 		}
 	}
-	max = len;
 	return (max);
 }

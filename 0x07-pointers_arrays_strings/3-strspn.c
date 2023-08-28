@@ -9,7 +9,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, len = 0, max = 0, p = 0, q = 0;
+	unsigned int i, j, len = 0, p = 0, q = 0;
 
 	while (s[p] != '\0')
 		p++;
@@ -27,10 +27,8 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (j > q)
 		{
-			if (max < len)
-				max = len;
-			len = 0;
+			return (len);
 		}
 	}
-	return (max);
+	return (len);
 }

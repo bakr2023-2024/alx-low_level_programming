@@ -15,9 +15,9 @@ unsigned int _strspn(char *s, char *accept)
 		p++;
 	while (accept[q] != '\0')
 		q++;
-	for (i = 0; i <= p; i++)
+	for (i = 0; i < p; i++)
 	{
-		for (j = 0; j <= q; j++)
+		for (j = 0; j < q; j++)
 		{
 			if (s[i] == accept[j])
 			{
@@ -25,7 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (j > q)
+		if (j == q)
 		{
 			return (len);
 		}

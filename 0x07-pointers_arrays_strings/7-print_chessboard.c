@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - Entry point
- * @a:double ambola 
+ * @a:double ambola
  * Return: void
  */
 

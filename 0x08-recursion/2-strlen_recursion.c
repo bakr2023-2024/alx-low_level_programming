@@ -2,7 +2,7 @@
 
 /**
  * _strlen_recursion - Entry point
- * @s: string 
+ * @s: string
  * Return: number
  */
 

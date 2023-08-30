@@ -7,7 +7,7 @@
  */
 int helper(int n, int inc)
 {
-	if (n < 1)
+	if (n <= 1)
 		return (0);
 	if (inc == n)
 		return (n);
@@ -23,5 +23,5 @@ int helper(int n, int inc)
  */
 int is_prime_number(int n)
 {
-	return ((helper(n, 1) == n) ? 1 : 0);
+	return ((helper(n, 2) == n) ? 1 : 0);
 }

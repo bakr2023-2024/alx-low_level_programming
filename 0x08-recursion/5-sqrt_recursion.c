@@ -22,6 +22,7 @@ int helper(int n, int inc)
 int _sqrt_recursion(int n)
 {
 	int div;
+
 	div = helper(n, 1);
 	if (n % div != 0 || div * div != n)
 		return (-1);

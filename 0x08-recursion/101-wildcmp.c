@@ -23,6 +23,7 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 {
 	if (s1[idx1] == '\0' || s2[idx2] == '\0')
 	{
+		printf("length: %d against helper: %d\n",_strlen(s2),idx2);
 		return (idx2);
 	}
 	if (s2[idx2] == '*')

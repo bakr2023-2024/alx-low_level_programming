@@ -23,9 +23,10 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 {
 	if (s1[idx1] == '\0' && s2[idx2] != '\0')
 	{
-
 		return (0);
 	}
+	else if(s1[idx1] != '\0' && s2[idx2] == '\0')
+		return (0);
 	else if(s1[idx1] == '\0')
 		return (1);
 	if (s2[idx2] == '*')
@@ -48,7 +49,7 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 		}
 		else
 		{
-			return (-0);
+			return (0);
 		}
 	}
 	return (helper(s1, s2, idx1, idx2));

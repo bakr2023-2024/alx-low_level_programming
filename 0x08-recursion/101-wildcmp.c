@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strlen - Entry point
  * @s: string
@@ -20,8 +21,10 @@ int _strlen(char *s)
  */
 int helper(char *s1, char *s2, int idx1, int idx2)
 {
-	if (s1[idx1] == '\0' || s2[idx2] == '\0')
+	if (s2[idx2] == '\0')
+	{
 		return (idx2);
+	}
 	if (s2[idx2] == '*')
 	{
 		if (s1[idx1] == s2[idx2 + 1])

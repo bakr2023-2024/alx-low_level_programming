@@ -42,7 +42,7 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 			idx2++;
 		}
 	}
-	return helper(s1, s2, idx1, idx2);
+	return (helper(s1, s2, idx1, idx2));
 }
 /**
  * wildcmp - Entry point
@@ -52,5 +52,5 @@ int helper(char *s1, char *s2, int idx1, int idx2)
  */
 int wildcmp(char *s1, char *s2)
 {
-	return (helper(s1, s2 , 0, 0) == _strlen(idx2) ? 1 : 0);
+	return (helper(s1, s2, 0, 0) == _strlen(idx2) ? 1 : 0);
 }

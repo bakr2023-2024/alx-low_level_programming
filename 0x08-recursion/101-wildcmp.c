@@ -29,14 +29,14 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 			idx1++;
 			idx2++;
 		}
-		else
+		else 
 		{
 			idx1++;
 		}
 	}
 	else
 	{
-		if (s1[idx1] == s2[idx2 + 1])
+		if (s1[idx1] == s2[idx2])
 		{
 			idx1++;
 			idx2++;

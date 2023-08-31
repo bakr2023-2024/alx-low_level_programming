@@ -31,13 +31,9 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 		{
 			idx2++;
 		}
-		else if(s2[idx2 + 1] == '\0') 
-		{
-			idx1++;
-		}
 		else
 		{
-			return (-1);
+			idx1++;
 		}
 	}
 	else

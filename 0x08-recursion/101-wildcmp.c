@@ -21,18 +21,23 @@ int _strlen(char *s)
  */
 int helper(char *s1, char *s2, int idx1, int idx2)
 {
+	printf("current indices: idx1: %d idx2: %d\n",idx1,idx2);
+	printf("comparing %s with %s\n",s1 + idx1,s2 + idx2);
 	if (s2[idx2] == '\0')
 	{
+		printf("ended\n");
 		return (idx2);
 	}
 	if (s2[idx2] == '*')
 	{
 		if (s1[idx1] == s2[idx2 + 1])
 		{
+			printf("wildcard success\n");
 			idx2++;
 		}
 		else 
 		{
+			printf("wildcard fail\n");
 			idx1++;
 		}
 	}
@@ -40,8 +45,13 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 	{
 		if (s1[idx1] == s2[idx2])
 		{
+			printf("success\n");
 			idx1++;
 			idx2++;
+		}
+		else
+		{
+			printf("fail");
 		}
 	}
 	return (helper(s1, s2, idx1, idx2));

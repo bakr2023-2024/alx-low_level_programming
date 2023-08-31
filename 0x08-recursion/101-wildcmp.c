@@ -61,10 +61,8 @@ int helper(char *s1, char *s2, int idx1, int idx2)
  */
 int wildcmp(char *s1, char *s2)
 {
-	int len, help;
+	int help;
 
-	len = _strlen(s1);
 	help = helper(s1, s2, 0, 0);
-	printf("length: %d against helper: %d\n",len,help);
-	return ((len == help) ? 1 : 0);
+	return (help);
 }

@@ -21,7 +21,7 @@ int _strlen(char *s)
  */
 int helper(char *s1, char *s2, int idx1, int idx2)
 {
-	if (s1[idx1] == '\0')
+	if (s1[idx1] == '\0' || s2[idx2] == '\0')
 	{
 
 		return (idx1);
@@ -31,7 +31,6 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 		if (s1[idx1] == s2[idx2 + 1])
 		{
 			idx2++;
-			idx1++;
 		}
 		else
 		{

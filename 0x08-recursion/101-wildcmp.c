@@ -23,7 +23,7 @@ int helper(char *s1, char *s2, int idx1, int idx2)
 {
 	if (s1[idx1] == '\0' || s2[idx2] == '\0')
 	{
-		printf("length: %d against helper: %d\n",_strlen(s2),idx2);
+
 		return (idx2);
 	}
 	if (s2[idx2] == '*')
@@ -59,5 +59,10 @@ int helper(char *s1, char *s2, int idx1, int idx2)
  */
 int wildcmp(char *s1, char *s2)
 {
-	return (helper(s1, s2, 0, 0) == _strlen(s2) ? 1 : 0);
+	int len, help;
+
+	len = _strlen(s2);
+	help = helper(s1, s2, 0, 0);
+	printf("length: %d against helper: %d\n",_strlen(s2),idx2);
+	return ((len == help) ? 1 : 0);
 }

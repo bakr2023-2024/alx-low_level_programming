@@ -15,5 +15,5 @@ int main(int argc, char *argv[])
 	ag = NULL;
 	a = 0;
 	printf("%d\n", argc);
-	return (0);
+	return (a);
 }

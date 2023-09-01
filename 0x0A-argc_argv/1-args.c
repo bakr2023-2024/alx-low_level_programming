@@ -9,6 +9,9 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%ld\n", argc - sizeof(argv) + sizeof(argv));
+	char *ag = argv;
+
+	ag = NULL;
+	printf("%ld\n", argc - sizeof(ag));
 	return (0);
 }

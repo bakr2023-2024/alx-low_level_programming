@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 		{
 			for (j = 0; j < strlen(argv[i]); j++)
 			{
+				printf("checking argv[%d] value: %c\n", i, argv[i][j]);
 				if (argv[i][j] < 48 || argv[i][j] > 57)
 				{
 					printf("Error\n");

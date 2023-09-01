@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 					coins -= 5;
 				else if (coins >= 2)
 					coins -= 2;
-				else if (coint >= 1)
+				else if (coins >= 1)
 					coins -= 1;
 				sum++;
 			}

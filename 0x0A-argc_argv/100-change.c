@@ -27,17 +27,17 @@ int main(int argc, char *argv[])
 			{
 				if (coins > 100)
 					coins -= 100;
-				else if (coins > 50)
+				else if (coins >= 50)
 					coins -= 50;
-				else if (coins > 25)
+				else if (coins >= 25)
 					coins -= 25;
-				else if (coins > 10)
+				else if (coins >= 10)
 					coins -= 10;
-				else if (coins > 5)
+				else if (coins >= 5)
 					coins -= 5;
-				else if (coins > 2)
+				else if (coins >= 2)
 					coins -= 2;
-				else
+				else if (coint >= 1)
 					coins -= 1;
 				sum++;
 			}

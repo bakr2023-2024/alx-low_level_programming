@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int i, j, a = 0;
+		int j, a = 0;
+		size_t i;
 
 		for (i = 0; i < argc; i++)
 		{

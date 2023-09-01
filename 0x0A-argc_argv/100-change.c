@@ -25,11 +25,7 @@ int main(int argc, char *argv[])
 		{
 			while (coins > 0)
 			{
-				if (coins >= 100)
-					coins -= 100;
-				else if (coins >= 50)
-					coins -= 50;
-				else if (coins >= 25)
+				if (coins >= 25)
 					coins -= 25;
 				else if (coins >= 10)
 					coins -= 10;

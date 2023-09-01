@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 	else
 	{
 		int i, a = 0;
-		size_t j;
+		int j;
 
 		for (i = 0; i < argc; i++)
 		{
-			for (j = 0; j < strlen(argv[i]); j++)
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
 				printf("checking argv[%d] value: %c\n", i, argv[i][j]);
 				if (argv[i][j] < 48 || argv[i][j] > 57)

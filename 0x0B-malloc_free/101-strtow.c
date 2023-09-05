@@ -13,7 +13,7 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	copy = malloc(strlen(str));
+	copy = malloc(strlen(str) + 1);
 	if (copy == NULL)
 		return (NULL);
 	strcpy(copy, str);
@@ -33,7 +33,7 @@ char **strtow(char *str)
 	sum = 0;
 	while (token != NULL)
 	{
-		*(grid + sum) = malloc(strlen(token));
+		*(grid + sum) = malloc(strlen(token) + 1);
 		if (*(grid + sum) == NULL)
 			return (NULL);
 		strcpy(*(grid + sum), token);

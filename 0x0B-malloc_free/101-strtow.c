@@ -24,21 +24,24 @@ char **strtow(char *str)
 		token = strtok(NULL, " ");
 	}
 	if (sum == 0)
+	{
+		free(copy);
 		return (NULL);
+	}
 	grid = malloc((sum + 1) * sizeof(char *));
 	if (grid == NULL)
+	{
+		free(copy);
 		return (NULL);
-	strcpy(copy, str);
+	}
+	strcpy(copy,str);
 	token = strtok(copy, " ");
 	sum = 0;
 	while (token != NULL)
 	{
 		*(grid + sum) = malloc(strlen(token) + 1);
-		if (*(grid + sum) == NULL)
-			return (NULL);
-		strcpy(*(grid + sum), token);
+		strcpy(*(grid + (sum++)), token);
 		token = strtok(NULL, " ");
-		sum++;
 	}
 	*(grid + sum) = NULL;
 	free(copy);

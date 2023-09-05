@@ -16,7 +16,7 @@ char **strtow(char *str)
 	copy = malloc(strlen(str) + 1);
 	if (str == NULL)
 		return (NULL);
-	strcpy(copy,str);
+	strcpy(copy, str);
 	token = strtok(copy, " ");
 	while (token != NULL)
 	{

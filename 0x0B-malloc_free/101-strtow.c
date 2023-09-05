@@ -25,7 +25,7 @@ char **strtow(char *str)
 	}
 	if (sum == 0)
 		return (NULL);
-	grid = malloc(sum * sizeof(char *));
+	grid = malloc((sum + 1) * sizeof(char *));
 	if (grid == NULL)
 		return (NULL);
 	strcpy(copy, str);

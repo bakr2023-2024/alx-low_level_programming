@@ -14,7 +14,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	copy = malloc(strlen(str) + 1);
-	if (str == NULL)
+	if (copy == NULL)
 		return (NULL);
 	strcpy(copy, str);
 	token = strtok(copy, " ");
@@ -26,7 +26,8 @@ char **strtow(char *str)
 	grid = malloc((sum + 1) * sizeof(char *));
 	if (grid == NULL)
 		return (NULL);
-	token = strtok(str, " ");
+	strcpy(copy, str);
+	token = strtok(copy, " ");
 	sum = 0;
 	while (token != NULL)
 	{
@@ -34,6 +35,7 @@ char **strtow(char *str)
 		if (*(grid + sum) == NULL)
 			return (NULL);
 		*(grid + sum) = token;
+		token = strtok(NULL, " ");
 		sum++;
 	}
 	*(grid + sum) = NULL;

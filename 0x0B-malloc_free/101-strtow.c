@@ -34,7 +34,6 @@ char **strtow(char *str)
 		free(copy);
 		return (NULL);
 	}
-	strcpy(copy, str);
 	token = strtok(copy, " ");
 	sum = 0;
 	while (token != NULL)

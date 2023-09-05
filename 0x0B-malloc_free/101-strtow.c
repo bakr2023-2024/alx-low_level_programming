@@ -23,7 +23,8 @@ char **strtow(char *str)
 		sum++;
 		token = strtok(NULL, " ");
 	}
-	printf("Sum: %d\n", sum);
+	if (sum == 0)
+		return (NULL);
 	grid = malloc(sum * sizeof(char *));
 	if (grid == NULL)
 		return (NULL);

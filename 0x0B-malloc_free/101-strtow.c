@@ -23,7 +23,7 @@ char **strtow(char *str)
 		sum++;
 		token = strtok(NULL, " ");
 	}
-	grid = malloc((sum + 1) * sizeof(char *));
+	grid = malloc(sum * sizeof(char *));
 	if (grid == NULL)
 		return (NULL);
 	strcpy(copy, str);

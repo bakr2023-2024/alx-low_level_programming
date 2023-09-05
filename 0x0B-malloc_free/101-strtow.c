@@ -34,7 +34,7 @@ char **strtow(char *str)
 		*(grid + sum) = malloc(strlen(token) + 1);
 		if (*(grid + sum) == NULL)
 			return (NULL);
-		strcpy(*(grid + sum),token);
+		strcpy(*(grid + sum), token);
 		token = strtok(NULL, " ");
 		sum++;
 	}

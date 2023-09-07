@@ -4,7 +4,7 @@
  * @s: string
  * Return: number
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
 	int i = 0;
 
@@ -21,7 +21,7 @@ int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, p, q;
+	unsigned int i, j, p, q;
 	char *str;
 
 	if (s1 == NULL)

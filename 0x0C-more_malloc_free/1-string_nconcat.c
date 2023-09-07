@@ -30,13 +30,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	i = _strlen(s1);
 	j = _strlen(s2);
-	printf("Size: %u, %u\n", i, j);
 	str = malloc(i + j - 1);
 	if (str == NULL)
 		return (NULL);
 	for (p = 0; p < i; p++)
 		str[p] = s1[p];
-	printf("%s.\n", str);
 	for (q = 0; q < j && q < n; q++)
 		str[p++] = s2[q];
 	str[p] = '\0';

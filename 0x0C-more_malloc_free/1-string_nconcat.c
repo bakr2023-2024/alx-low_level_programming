@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > j)
 		n = j;
 	strncat(str, s1, i);
-	strncat(str, s2, j);
+	strncat(str, s2, n);
 	str[i + j + 1] = '\0';
 	return (str);
 }

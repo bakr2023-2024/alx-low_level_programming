@@ -10,7 +10,7 @@ unsigned int _strlen(char *s)
 
 	while (s[i] != '\0')
 		i++;
-	return (i - 1);
+	return (i);
 }
 /**
  * string_nconcat - Entry point

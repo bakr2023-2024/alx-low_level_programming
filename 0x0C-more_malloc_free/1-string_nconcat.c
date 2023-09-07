@@ -1,18 +1,5 @@
 #include "main.h"
 /**
- * _strlen - ambola
- * @s: string
- * Return: number
- */
-unsigned int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-/**
  * string_nconcat - Entry point
  * @s1: str
  * @s2: ss
@@ -28,15 +15,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	i = _strlen(s1);
-	j = _strlen(s2);
+	i = strlen(s1);
+	j = strlen(s2);
 	str = malloc(i + j - 1);
 	if (str == NULL)
 		return (NULL);
-	for (p = 0; p < i; p++)
-		str[p] = s1[p];
-	for (q = 0; q < j && q < n; q++)
-		str[p++] = s2[q];
-	str[p] = '\0';
+	if (n > j)
+		n = j;
+	strcat(str, s1, i);
+	strcat(str, s2, n);
 	return (str);
 }

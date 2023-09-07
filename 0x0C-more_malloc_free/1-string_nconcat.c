@@ -29,8 +29,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	i = _strlen(s1);
-	printf("Size: %u\n", i);
 	j = _strlen(s2);
+	printf("Size: %u, %u\n", i, j);
 	str = malloc(i + j + 1);
 	if (str == NULL)
 		return (NULL);

@@ -1,42 +1,37 @@
 #include "dog.h"
+#include <string.h>
 /**
- * new_dog: Entry point
- * @name: nibib
- * @age: alala
- * @owner: apaap
- * Return: bibi
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Return: pointer to the new dog (Success), NULL otherwise
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *n, *o;
-	int i = 0;
 	dog_t *dog;
+	int len1, len2;
 
-	n = malloc(sizeof(*name));
-	o = malloc(sizeof(*owner));
 	dog = malloc(sizeof(dog_t));
-	if (dog == NULL || o == NULL || n == NULL)
+	if (dog == NULL)
+		return (NULL);
+
+	dog->name = malloc(strlen(name) + 1);
+	if (dog->name == NULL)
 	{
-		free (dog);
-		free (n);
-		free (o);
+		free(dog);
 		return (NULL);
 	}
-	while (name[i] != '\0')
+	dog->owner = malloc(strlen(owner) + 1);
+	if (dog->owner == NULL)
 	{
-		n[i] = name[i];
-		i++;
+		free(dog);
+		free(dog->name);
+		return (NULL);
 	}
-	n[i] = '\0';
-	i = 0;
-	while (owner[i] != '\0')
-	{
-		o[i] = owner[i];
-		i++;
-	}
-	o[i] = '\0';
-	dog->name = n;
-	dog->owner = o;
+	strcpy(dog->name, name);
+	strcpy(dog->owner, owner);
 	dog->age = age;
 	return (dog);
 }

@@ -19,21 +19,11 @@ int main(int argc, char *argv[])
 	i = atoi(argv[1]);
 	j = atoi(argv[3]);
 	op = argv[2];
-	switch (op[0])
+	if (op[0] != '+' || op[0] != '-' || op[0] != '/'
+			|| op[0] != '*' || op[0] !='%')
 	{
-		case '+':
-			break;
-		case '-':
-			break;
-		case '/':
-			break;
-		case '*':
-			break;
-		case '%':
-			break;
-		default:
-			printf("Error\n");
-			exit(99);
+		printf("Error\n");
+		exit(99);
 	}
 	if ((op[0] == '/' || op[0] == '%') && j == 0)
 	{

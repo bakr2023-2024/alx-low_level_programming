@@ -8,7 +8,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *ptr = malloc(sizeof(*head));
-	
+
 	if (ptr == NULL)
 		return (NULL);
 	ptr->str = strdup(str);

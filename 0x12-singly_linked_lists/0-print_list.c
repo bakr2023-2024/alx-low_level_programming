@@ -7,18 +7,15 @@
 size_t print_list(const list_t *h)
 {
 	size_t sum = 0;
-	list_t *ptr = h;
 
-	if (ptr == NULL)
-		return (0);
-	while (ptr->next != NULL)
+	while (h != NULL)
 	{
-		if (ptr->next == NULL)
+		if (h->str == NULL)
 			printf("[%d] %s\n", 0, "(nil)");
 		else
-			printf("[%d] %s\n", ptr->len, ptr->str);
+			printf("[%u] %s\n", h->len, h->str);
 		sum++;
-		ptr = ptr->next;
+		h = h->next;
 	}
 	return (sum);
 }

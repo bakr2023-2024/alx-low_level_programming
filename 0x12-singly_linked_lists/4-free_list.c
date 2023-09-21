@@ -7,10 +7,11 @@
 void free_list(list_t *head)
 {
 	list_t *ptr = head;
-
+	list_t *new;
 	while (ptr != NULL)
 	{
-		head = ptr->next;
+		new = ptr->next;
 		free (ptr);
+		ptr = new;
 	}
 }

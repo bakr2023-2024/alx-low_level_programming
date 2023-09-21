@@ -7,10 +7,5 @@ void before_main(void) __attribute__((constructor));
  */
 void before_main(void)
 {
-	char *s1 = strdup("You're beat! and yet you must allow,\n");
-	char *s2 = strdup("I bore my house upon my back!\n");
-
-	printf("%s%s", s1, s2);
-	free(s1);
-	free(s2);
+	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
 }

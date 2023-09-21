@@ -14,10 +14,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	new->str = strdup(str);
 	new->len = strlen(str);
-	while (ptr->next != NULL)
+	while (ptr != NULL && ptr->next != NULL)
 	{
 		ptr = ptr->next;
 	}
-	ptr->next = new;
+	if (ptr != NULL)
+		ptr->next = new;
 	return (new);
 }
